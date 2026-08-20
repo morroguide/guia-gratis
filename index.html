@@ -164,7 +164,7 @@
     <div class="card success" id="successCard">
       <h2>Prontinho! 🏝️</h2>
       <p>Seu Guia Grátis do Morro está a um clique de distância. Se preferir, também vamos te mandar por WhatsApp/e-mail em instantes.</p>
-      <a href="https://assets.api.gamma.app/export/pdf/m4hfn9hde1x8l0n/f5774e44e918b91bbab71128f7d85dee/Morro-Guide-Guia-Gratuito-v22.pdf" id="guideLink" target="_blank" rel="noopener">Abrir meu Guia Grátis agora →</a>
+      <a href="https://assets.api.gamma.app/export/pdf/29vjcuodpueol50/cfdbbf30e05d13779b2aadca43e64a35/Morro-Guide-Guia-Gratuito-v4.pdf" id="guideLink" target="_blank" rel="noopener">Abrir meu Guia Grátis agora →</a>
     </div>
   </div>
 
@@ -180,7 +180,7 @@
   // 2) GUIDE_URL: link do guia grátis que a pessoa recebe ao final.
   // ===================================================================
   const SUBMIT_URL = "https://script.google.com/macros/s/AKfycbxQ7kWc60WOCJ9f_dEY6SK2VaQedOI0fhHZJb1swAe5fQWV9qphYgsCWFDnvb7fI9XFog/exec";
-  const GUIDE_URL = "https://assets.api.gamma.app/export/pdf/m4hfn9hde1x8l0n/f5774e44e918b91bbab71128f7d85dee/Morro-Guide-Guia-Gratuito-v22.pdf";
+  const GUIDE_URL = "https://assets.api.gamma.app/export/pdf/29vjcuodpueol50/cfdbbf30e05d13779b2aadca43e64a35/Morro-Guide-Guia-Gratuito-v4.pdf";
 
   const form = document.getElementById('leadForm');
   const formCard = document.getElementById('formCard');
@@ -198,7 +198,7 @@
     const whatsappOk = whatsapp.replace(/\D/g,'').length >= 10;
 
     if(!nome || !emailOk || !whatsappOk){
-      errorMsg.style.display = 'block';
++      errorMsg.style.display = 'block';
       return;
     }
     errorMsg.style.display = 'none';
