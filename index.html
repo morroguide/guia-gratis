@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morro Guide Oficial — Receba seu Guia Grátis</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=Cabin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c1f27;
+    --card:#112836;
+    --accent:#0A988B;
+    --accent-light:#38b6a6;
+    --text:#ffffff;
+    --muted:#CAD6DE;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Cabin',sans-serif;
+    background:linear-gradient(160deg,#0c1f27 0%,#08151b 100%);
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+  .wrap{
+    max-width:480px;
+    width:100%;
+  }
+  .badge{
+    display:inline-block;
+    background:rgba(10,152,139,0.18);
+    color:var(--accent-light);
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:'Unbounded',sans-serif;
+    font-weight:700;
+    font-size:28px;
+    line-height:1.25;
+    margin-bottom:14px;
+  }
+  p.lead{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:22px;
+  }
+  .highlight{color:#ffffff;font-weight:700;}
+  .card{
+    background:var(--card);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:16px;
+    padding:28px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.35);
+  }
+  .field{margin-bottom:16px;}
+  label{
+    display:block;
+    font-size:13px;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:500;
+  }
+  input{
+    width:100%;
+    padding:13px 14px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.15);
+    background:rgba(255,255,255,0.04);
+    color:var(--text);
+    font-size:15px;
+    font-family:'Cabin',sans-serif;
+    outline:none;
+    transition:border-color .15s;
+  }
+  input:focus{border-color:var(--accent-light);}
+  input::placeholder{color:rgba(255,255,255,0.35);}
+  button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:var(--accent);
+    color:#fff;
+    font-family:'Cabin',sans-serif;
+    font-weight:600;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:6px;
+    transition:background .15s, transform .1s;
+  }
+  button:hover{background:var(--accent-light);}
+  button:active{transform:scale(0.99);}
+  .fineprint{
+    text-align:center;
+    color:rgba(255,255,255,0.4);
+    font-size:12px;
+    margin-top:14px;
+    line-height:1.5;
+  }
+  .success{
+    display:none;
+    text-align:center;
+  }
+  .success h2{
+    font-family:'Unbounded',sans-serif;
+    font-size:22px;
+    margin-bottom:12px;
+  }
+  .success p{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:22px;}
+  .success a{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:10px;
+    font-weight:600;
+  }
+  .error-msg{
+    color:#ff8a8a;
+    font-size:13px;
+    margin-top:-8px;
+    margin-bottom:10px;
+    display:none;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="badge">Morro de São Paulo · Bahia</span>
+    <h1>Morro de São Paulo mudou em 2026. A maioria só descobre o que mudou depois de gastar errado.</h1>
+    <p class="lead">A taxa de entrada da ilha subiu de R$70 para <span class="highlight">R$90</span> em agosto de 2026. Deixe seu nome, e-mail e WhatsApp abaixo e receba agora o <span class="highlight">Guia Grátis do Morro Guide</span> — passeios, onde comer sem errar e como economizar de verdade na viagem.</p>
+
+    <div class="card" id="formCard">
+      <form id="leadForm">
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="field">
+          <label for="whatsapp">WhatsApp (com DDD)</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(75) 99999-9999" required>
+        </div>
+        <div class="error-msg" id="errorMsg">Preencha nome, e-mail e WhatsApp válidos.</div>
+        <button type="submit">Quero receber meu Guia Grátis</button>
+      </form>
+      <p class="fineprint">Ao enviar, você recebe o guia por e-mail e/ou WhatsApp e passa a fazer parte da lista de novidades e benefícios do Morro Guide. Sem spam.</p>
+    </div>
+
+    <div class="card success" id="successCard">
+      <h2>Prontinho! 🏝️</h2>
+      <p>Seu Guia Grátis do Morro está a um clique de distância. Se preferir, também vamos te mandar por WhatsApp/e-mail em instantes.</p>
+      <a href="https://assets.api.gamma.app/export/pdf/m4hfn9hde1x8l0n/f5774e44e918b91bbab71128f7d85dee/Morro-Guide-Guia-Gratuito-v22.pdf" id="guideLink" target="_blank" rel="noopener">Abrir meu Guia Grátis agora →</a>
+    </div>
+  </div>
+
+<script>
+  // ===================================================================
+  // CONFIGURAÇÃO — leia antes de publicar:
+  //
+  // 1) SUBMIT_URL: troque pela URL do seu Google Apps Script (Web App)
+  //    ou de outro serviço de formulário. Enquanto isso não for
+  //    configurado, os dados NÃO são salvos em lugar nenhum — o botão
+  //    só libera o link do guia. Veja instruções completas no chat.
+  //
+  // 2) GUIDE_URL: link do guia grátis que a pessoa recebe ao final.
+  // ===================================================================
+  const SUBMIT_URL = "https://script.google.com/macros/s/AKfycbxQ7kWc60WOCJ9f_dEY6SK2VaQedOI0fhHZJb1swAe5fQWV9qphYgsCWFDnvb7fI9XFog/exec";
+  const GUIDE_URL = "https://assets.api.gamma.app/export/pdf/m4hfn9hde1x8l0n/f5774e44e918b91bbab71128f7d85dee/Morro-Guide-Guia-Gratuito-v22.pdf";
+
+  const form = document.getElementById('leadForm');
+  const formCard = document.getElementById('formCard');
+  const successCard = document.getElementById('successCard');
+  const errorMsg = document.getElementById('errorMsg');
+  document.getElementById('guideLink').href = GUIDE_URL;
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const whatsapp = document.getElementById('whatsapp').value.trim();
+
+    const emailOk = /\S+@\S+\.\S+/.test(email);
+    const whatsappOk = whatsapp.replace(/\D/g,'').length >= 10;
+
+    if(!nome || !emailOk || !whatsappOk){
+      errorMsg.style.display = 'block';
+      return;
+    }
+    errorMsg.style.display = 'none';
+
+    if(SUBMIT_URL){
+      try{
+        await fetch(SUBMIT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+            nome: nome,
+            email: email,
+            whatsapp: whatsapp,
+            origem: 'guia_gratis_meta_ads',
+            data: new Date().toISOString()
+          })
+        });
+      }catch(err){
+        console.error('Falha ao enviar lead:', err);
+      }
+    }
+
+    formCard.style.display = 'none';
+    successCard.style.display = 'block';
+  });
+</script>
+</body>
+</html>
